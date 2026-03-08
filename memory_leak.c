@@ -19,7 +19,7 @@ int main() {
     int iteration = 0;
     
     printf("Starting memory leak program...\n");
-    printf("This program will leak 1 KB of memory every 2 seconds\n");
+    printf("This program will leak 1 KB of memory every 1 minute\n");
     printf("Use tools like 'valgrind' or 'ps' to monitor memory growth\n");
     printf("Press Ctrl+C to exit\n\n");
     
@@ -30,8 +30,8 @@ int main() {
         printf("Iteration %d: Leaked 1 KB (Total leaked: %d KB)\n", 
                iteration, iteration);
         
-        // Sleep for 2 seconds between leaks
-        sleep(2);
+        // Sleep for 1 minute (60 seconds) between leaks
+        sleep(60);
     }
     
     return 0;
